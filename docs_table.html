@@ -1,0 +1,105 @@
+From https://web.archive.org/web/20230707130733/https://learn.microsoft.com/en-us/windows/win32/debug/getexceptioncode
+
+<div class="has-inner-focus"><table aria-label="Table 1" class="table table-sm">
+<thead>
+<tr>
+<th>Return code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_ACCESS_VIOLATION</strong></dt> </dl></td>
+<td>The thread attempts to read from or write to a virtual address for which it does not have access.<br> This value is defined as STATUS_ACCESS_VIOLATION.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_ARRAY_BOUNDS_EXCEEDED</strong></dt> </dl></td>
+<td>The thread attempts to access an array element that is out of bounds, and the underlying hardware supports bounds checking.<br> This value is defined as STATUS_ARRAY_BOUNDS_EXCEEDED.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_BREAKPOINT</strong></dt> </dl></td>
+<td>A breakpoint is encountered.<br> This value is defined as STATUS_BREAKPOINT.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_DATATYPE_MISALIGNMENT</strong></dt> </dl></td>
+<td>The thread attempts to read or write data that is misaligned on hardware that does not provide alignment. For example, 16-bit values must be aligned on 2-byte boundaries, 32-bit values on 4-byte boundaries, and so on.<br> This value is defined as STATUS_DATATYPE_MISALIGNMENT.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_FLT_DENORMAL_OPERAND</strong></dt> </dl></td>
+<td>One of the operands in a floating point operation is denormal. A denormal value is one that is too small to represent as a standard floating point value.<br> This value is defined as STATUS_FLOAT_DENORMAL_OPERAND.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_FLT_DIVIDE_BY_ZERO</strong></dt> </dl></td>
+<td>The thread attempts to divide a floating point value by a floating point divisor of 0 (zero).<br> This value is defined as STATUS_FLOAT_DIVIDE_BY_ZERO.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_FLT_INEXACT_RESULT</strong></dt> </dl></td>
+<td>The result of a floating point operation cannot be represented exactly as a decimal fraction.<br> This value is defined as STATUS_FLOAT_INEXACT_RESULT.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_FLT_INVALID_OPERATION</strong></dt> </dl></td>
+<td>A floating point exception that is not included in this list.<br> This value is defined as STATUS_FLOAT_INVALID_OPERATION.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_FLT_OVERFLOW</strong></dt> </dl></td>
+<td>The exponent of a floating point operation is greater than the magnitude allowed by the corresponding type.<br> This value is defined as STATUS_FLOAT_OVERFLOW.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_FLT_STACK_CHECK</strong></dt> </dl></td>
+<td>The stack has overflowed or underflowed, because of a floating point operation.<br> This value is defined as STATUS_FLOAT_STACK_CHECK.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_FLT_UNDERFLOW</strong></dt> </dl></td>
+<td>The exponent of a floating point operation is less than the magnitude allowed by the corresponding type.<br> This value is defined as STATUS_FLOAT_UNDERFLOW.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_GUARD_PAGE</strong></dt> </dl></td>
+<td>The thread accessed memory allocated with the PAGE_GUARD modifier.<br> This value is defined as STATUS_GUARD_PAGE_VIOLATION.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_ILLEGAL_INSTRUCTION</strong></dt> </dl></td>
+<td>The thread tries to execute an invalid instruction.<br> This value is defined as STATUS_ILLEGAL_INSTRUCTION.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_IN_PAGE_ERROR</strong></dt> </dl></td>
+<td>The thread tries to access a page that is not present, and the system is unable to load the page. For example, this exception might occur if a network connection is lost while running a program over a network.<br> This value is defined as STATUS_IN_PAGE_ERROR.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_INT_DIVIDE_BY_ZERO</strong></dt> </dl></td>
+<td>The thread attempts to divide an integer value by an integer divisor of 0 (zero).<br> This value is defined as STATUS_INTEGER_DIVIDE_BY_ZERO.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_INT_OVERFLOW</strong></dt> </dl></td>
+<td>The result of an integer operation creates a value that is too large to be held by the destination register. In some cases, this will result in a carry out of the most significant bit of the result. Some operations do not set the carry flag.<br> This value is defined as STATUS_INTEGER_OVERFLOW.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_INVALID_DISPOSITION</strong></dt> </dl></td>
+<td>An exception handler returns an invalid disposition to the exception dispatcher. Programmers using a high-level language such as C should never encounter this exception.<br> This value is defined as STATUS_INVALID_DISPOSITION.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_INVALID_HANDLE</strong></dt> </dl></td>
+<td>The thread used a handle to a kernel object that was invalid (probably because it had been closed.)<br> This value is defined as STATUS_INVALID_HANDLE.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_NONCONTINUABLE_EXCEPTION</strong></dt> </dl></td>
+<td>The thread attempts to continue execution after a non-continuable exception occurs.<br> This value is defined as STATUS_NONCONTINUABLE_EXCEPTION.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_PRIV_INSTRUCTION</strong></dt> </dl></td>
+<td>The thread attempts to execute an instruction with an operation that is not allowed in the current computer mode.<br> This value is defined as STATUS_PRIVILEGED_INSTRUCTION.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_SINGLE_STEP</strong></dt> </dl></td>
+<td>A trace trap or other single instruction mechanism signals that one instruction is executed.<br> This value is defined as STATUS_SINGLE_STEP.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>EXCEPTION_STACK_OVERFLOW</strong></dt> </dl></td>
+<td>The thread uses up its stack.<br> This value is defined as STATUS_STACK_OVERFLOW.<br></td>
+</tr>
+<tr>
+<td><dl> <dt><strong>STATUS_UNWIND_CONSOLIDATE</strong></dt> </dl></td>
+<td>A frame consolidation has been executed.<br></td>
+</tr>
+</tbody>
+</table></div>
+

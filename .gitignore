@@ -1,0 +1,12 @@
+winnt.h
+
+# IDEs
+
+.vscode
+.idea
+*.iml
+
+# CMake
+
+cmake-build-*
+build
