@@ -1,1 +1,0 @@
-cat .\docs_table.html | sls -Pattern "(STATUS|EXCEPTION)_\w*" -AllMatches | % {$_.Matches.Value} | sd "(EXCEPTION_\w+)\s+(STATUS_\w+)" "official_names[`"`$2`"] = `"`$1`";" | sd "(STATUS_UNWIND_CONSOLIDATE)" "// this one has no code??? `$1" > data/official_names.inc
