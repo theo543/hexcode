@@ -34,10 +34,13 @@ int main(int args, char**argv) {
 	if(arg[0] != '\0' && arg[0] == '0' && (arg[1] == 'x' || arg[1] == 'X')) {
 		data = strtoul(arg, &end, 16);
 		check_input_errors(arg, end);
-	} else {
+	} else if(arg[0] != '\0' && arg[0] == '-') {
 		input = strtol(arg, &end, 10);
 		check_input_errors(arg, end);
 		memcpy(&data, &input, sizeof(input));
+	} else {
+		data = strtoul(arg, &end, 10);
+		check_input_errors(arg, end);
 	}
 
     printf("0x%08X", data);
