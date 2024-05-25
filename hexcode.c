@@ -76,9 +76,11 @@ int main(int argc, char **argv) {
 
 	for(int i = 0; i < data_len; i++) {
 		if(codes[i] == data) {
-			printf(" (%s)\n", names[i]);
+			printf(" (%s)", names[i]);
 		}
 	}
+
+	printf("\n");
 
 	return 0;
 }
